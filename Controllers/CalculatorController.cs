@@ -81,7 +81,6 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-
         private bool IsNumeric(string strNumber)
         {
             double number;
