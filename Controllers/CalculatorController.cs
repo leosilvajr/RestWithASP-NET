@@ -58,7 +58,6 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-
         [HttpGet("mean/{firstNumber}/{secondNumber}")]
         public IActionResult Mean(string firstNumber, string secondNumber)
         {
