@@ -88,7 +88,6 @@ namespace RestWithASPNET.Controllers
                                                        System.Globalization.NumberFormatInfo.InvariantInfo, out number);
             return isNumber;
         }
-
         private decimal ConvertToDecimal(string strNumber)
         {
             decimal decimalValue;

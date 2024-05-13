@@ -27,6 +27,7 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+.vs/RestWithASPNET
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -99,6 +100,7 @@ ipch/
 
 # Visual Studio Trace Files
 *.e2e
+*.suo
 
 # TFS 2012 Local Workspace
 $tf/
@@ -212,6 +214,10 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
+bin/Debug/net8.0/
+obj/Debug/net8.0/
+.vs/
+
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
@@ -304,3 +310,38 @@ __pycache__/
 
 # OpenCover UI analysis results
 OpenCover/
+
+# From .NET Core 3.0 you can use the command: `dotnet new gitignore` to generate a customizable .gitignore file
+
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
