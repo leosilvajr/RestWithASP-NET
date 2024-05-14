@@ -50,3 +50,10 @@ C:\Git\RestWithASP-NET\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Git\RestWithASP-NET\obj\Debug\net8.0\scopedcss\bundle\RestWithASPNET.styles.css
 C:\Git\RestWithASP-NET\obj\Debug\net8.0\RestWithASPNET.genruntimeconfig.cache
 C:\Git\RestWithASP-NET\obj\Debug\net8.0\ref\RestWithASPNET.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\MySqlConnector.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Git\RestWithASP-NET\obj\Debug\net8.0\RestWithASPNET.csproj.AssemblyReference.cache
+C:\Git\RestWithASP-NET\obj\Debug\net8.0\RestWith.BF0436F0.Up2Date
