@@ -1,7 +1,10 @@
 using EvolveDb;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using RestWithASPNET.Business;
+using RestWithASPNET.Business.Implementations;
 using RestWithASPNET.Repository;
+using RestWithASPNET.Repository.Implementations;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementations;
 using RestWithASPNETUdemy.Model.Context;
@@ -28,6 +31,9 @@ builder.Services.AddApiVersioning();
 //Injeção de Dependencia
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+
+builder.Services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+builder.Services.AddScoped<IBookRepository, BookRepositoryImplementation>();
 
 var app = builder.Build();
 

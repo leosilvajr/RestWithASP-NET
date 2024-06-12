@@ -1,5 +1,4 @@
-﻿
-using RestWithASPNETUdemy.Model;
+﻿using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Repository;
 
