@@ -1,19 +1,20 @@
-﻿using RestWithASPNET.Model;
-using RestWithASPNET.Model.Context;
-using System;
+﻿
+using RestWithASPNETUdemy.Model;
+using RestWithASPNETUdemy.Model.Context;
+using RestWithASPNETUdemy.Repository;
 
-namespace RestWithASPNET.Services.Implementations
+namespace RestWithASPNET.Repository
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySQLContext _context;
 
-        public PersonServiceImplementation(MySQLContext context)
+        public PersonRepositoryImplementation(MySQLContext context)
         {
             _context = context;
         }
 
-        public Person FindById(long id)
+        public Person FindByID(long id)
         {
             return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
@@ -37,7 +38,7 @@ namespace RestWithASPNET.Services.Implementations
         }
         public Person Update(Person person)
         {
-            if (!Exists(person.Id)) return new Person();
+            if (!Exists(person.Id)) return null;
 
             var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
 
@@ -73,7 +74,7 @@ namespace RestWithASPNET.Services.Implementations
                 }
             }
         }
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return _context.Persons.Any(p => p.Id.Equals(id));
         }

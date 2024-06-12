@@ -1,14 +1,14 @@
-﻿using RestWithASPNET.Model;
+﻿
+using RestWithASPNETUdemy.Model;
 
-namespace RestWithASPNET.Services
+namespace RestWithASPNETUdemy.Business
 {
-    public interface IPersonService
+    public interface IPersonBusiness
     {
         Person Create(Person person);
-        Person FindById(long id);
+        Person FindByID(long id);
         List<Person> FindAll();
         Person Update(Person person);
         void Delete(long id);
     }
-
 }

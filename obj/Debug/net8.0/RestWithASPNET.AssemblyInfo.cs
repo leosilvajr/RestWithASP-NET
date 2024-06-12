@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestWithASPNET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c478465d0d61eabcc4ccd2cf7fb1d092f4f97dc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9938fa52d4db82eabeace1bfdcb59057f7c155e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RestWithASPNET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RestWithASPNET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
