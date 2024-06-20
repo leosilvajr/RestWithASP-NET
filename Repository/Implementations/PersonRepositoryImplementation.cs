@@ -15,7 +15,8 @@ namespace RestWithASPNET.Repository
 
         public Person FindByID(long id)
         {
-            return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+            var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+            return result;
         }
         public List<Person> FindAll()
         {

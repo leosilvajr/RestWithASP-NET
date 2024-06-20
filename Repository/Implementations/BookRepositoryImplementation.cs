@@ -79,3 +79,6 @@ namespace RestWithASPNET.Repository.Implementations
 
     }
 }
+
+
+//DAO - Data Acess Objetc - Implementado apenas pensando na base de dados.
