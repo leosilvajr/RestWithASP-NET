@@ -1,12 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using RestWithASPNET.Model.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestWithASPNETUdemy.Model
 {
     [Table("person")]
-    public class Person
+    public class Person : BaseEntity
     {
-        [Column("id")]
-        public long Id { get; set; }
+        //Removido porque vamos herdar da BaseEntity
+        //[Column("id")]
+        //public long Id { get; set; }
 
         [Column("first_name")]
         public string FirstName { get; set; }
