@@ -1,4 +1,7 @@
-﻿using RestWithASPNET.Model;
+﻿using RestWithASPNET.Data.Converter.Contract;
+using RestWithASPNET.Data.Converter.Implementations;
+using RestWithASPNET.Data.VO;
+using RestWithASPNET.Model;
 using RestWithASPNET.Repository;
 using RestWithASPNETUdemy.Repository;
 
@@ -7,26 +10,32 @@ namespace RestWithASPNET.Business.Implementations
     public class BookBusinessImplementation : IBookBusiness
     {
         private readonly IRepository<Book> _repository;
+        private readonly BookConverter converter;
         public BookBusinessImplementation(IRepository<Book> repository)
         {
             _repository = repository;
+            converter = new BookConverter();
         }
-        public List<Book> FindAll()
+        public List<BookVO> FindAll()
         {
-            return _repository.FindAll();
+            return converter.Parse(_repository.FindAll());
         }
-        public Book FindByID(long id)
+        public BookVO FindByID(long id)
         {
-            return _repository.FindByID(id);
+            return converter.Parse(_repository.FindByID(id));
         }
 
-        public Book Create(Book book)
+        public BookVO Create(BookVO book)
         {
-            return _repository.Create(book);
+            var bookEntity = converter.Parse(book);
+            bookEntity = _repository.Create(bookEntity);
+            return converter.Parse(bookEntity);
         }
-        public Book Update(Book book)
+        public BookVO Update(BookVO book)
         {
-            return _repository.Update(book);
+            var bookEntity = converter.Parse(book);
+            bookEntity = _repository.Update(bookEntity);
+            return converter.Parse(bookEntity);
         }
         public void Delete(int id)
         {

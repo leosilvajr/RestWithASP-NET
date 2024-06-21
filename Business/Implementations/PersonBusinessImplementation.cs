@@ -1,43 +1,47 @@
-﻿using RestWithASPNETUdemy.Model;
+﻿using RestWithASPNET.Data.Converter.Implementations;
+using RestWithASPNETUdemy.Data.VO;
+using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Repository;
 
 namespace RestWithASPNETUdemy.Business.Implementations
 {
+    //Vamos ajustar a PersonBusiness para lidar com PesonVO, ou seja, vamos encapsular a logica da nossa aplicação.
     public class PersonBusinessImplementation : IPersonBusiness
     {
 
         private readonly IRepository<Person> _repository;
+        private readonly PersonConverter _converter;
 
         public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
 
-        // Method responsible for returning all people,
-        public List<Person> FindAll()
+        public List<PersonVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.Parse(_repository.FindAll());
         }
 
-        // Method responsible for returning one person by ID
-        public Person FindByID(long id)
+        public PersonVO FindByID(long id)
         {
-            return _repository.FindByID(id);
+            return _converter.Parse(_repository.FindByID(id));
         }
 
-        // Method responsible to crete one new person
-        public Person Create(Person person)
+        public PersonVO Create(PersonVO person) //Quando o objeto chega, ele é um VO então não da pra persistir na base de dados.
         {
-            return _repository.Create(person);
+            var personEntity = _converter.Parse(person); //Vamos parsear ele para a entidade Person, com isso podemos persistir
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
         }
 
-        // Method responsible for updating one person
-        public Person Update(Person person)
+        public PersonVO Update(PersonVO person)
         {
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(_repository.Update(personEntity));
         }
 
-        // Method responsible for deleting a person from an ID
         public void Delete(long id)
         {
             _repository.Delete(id);
