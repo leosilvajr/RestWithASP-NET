@@ -1,5 +1,4 @@
 ﻿using RestWithASPNET.Model.Base;
-using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNETUdemy.Repository
 {

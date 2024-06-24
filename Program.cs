@@ -1,5 +1,6 @@
 using EvolveDb;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 using MySqlConnector;
 using RestWithASPNET.Business;
 using RestWithASPNET.Business.Implementations;
@@ -24,6 +25,16 @@ if (builder.Environment.IsDevelopment())
 {
     MigrateDatabase(connection);
 }
+
+builder.Services.AddMvc(options => //Content Negotiation
+{
+    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
+
+    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml")); 
+    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+})
+.AddXmlSerializerFormatters();
+
 //Versioning API
 builder.Services.AddApiVersioning();
 
@@ -41,6 +52,10 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+
+app.UseCors("AllowAllOrigins");
+
 
 app.MapControllers();
 

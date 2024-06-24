@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\business\\implementations\\bookbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:business\\implementations\\bookbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\converter\\implementations\\bookconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\converter\\implementations\\bookconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\converter\\contract\\iparse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\converter\\contract\\iparse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\vo\\bookvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\vo\\bookvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwC4AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T03:11:32.74Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -40,6 +55,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAuwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T18:03:56.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Repository\\Generic\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Generic\\GenericRepository.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Repository\\Generic\\GenericRepository.cs",
+              "RelativeToolTip": "Repository\\Generic\\GenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T14:47:30.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookBusinessImplementation.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\BookBusinessImplementation.cs",
+              "RelativeDocumentMoniker": "Business\\Implementations\\BookBusinessImplementation.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\BookBusinessImplementation.cs",
+              "RelativeToolTip": "Business\\Implementations\\BookBusinessImplementation.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:55:16.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookConverter.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Implementations\\BookConverter.cs",
+              "RelativeDocumentMoniker": "Data\\Converter\\Implementations\\BookConverter.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Implementations\\BookConverter.cs",
+              "RelativeToolTip": "Data\\Converter\\Implementations\\BookConverter.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:54:54.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IParse.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Contract\\IParse.cs",
+              "RelativeDocumentMoniker": "Data\\Converter\\Contract\\IParse.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Contract\\IParse.cs",
+              "RelativeToolTip": "Data\\Converter\\Contract\\IParse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:54:33.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookVO.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
+              "RelativeDocumentMoniker": "Data\\VO\\BookVO.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
+              "RelativeToolTip": "Data\\VO\\BookVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:52:59.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\Base\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Base\\BaseEntity.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\Base\\BaseEntity.cs",
+              "RelativeToolTip": "Model\\Base\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:49:11.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\Book.cs",
+              "RelativeDocumentMoniker": "Model\\Book.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\Book.cs",
+              "RelativeToolTip": "Model\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:48:54.838Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -2,10 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNET.Business;
 using RestWithASPNET.Data.VO;
-using RestWithASPNET.Model;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Controllers;
-using RestWithASPNETUdemy.Model;
 
 namespace RestWithASPNET.Controllers
 {
@@ -15,11 +11,11 @@ namespace RestWithASPNET.Controllers
     public class BookController : Controller
     {
 
-        private readonly ILogger<PersonController> _logger;
-        private IBookBusiness _bookBusiness;
-        public BookController(ILogger<PersonController> logger, IBookBusiness bookBusiness)
+        //private readonly ILogger<PersonController> _logger;
+        private readonly IBookBusiness _bookBusiness;
+        public BookController(IBookBusiness bookBusiness)
         {
-            _logger = logger;
+            //_logger = logger;
             _bookBusiness = bookBusiness;
         }
 

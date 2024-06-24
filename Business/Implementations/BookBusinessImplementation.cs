@@ -1,8 +1,6 @@
-﻿using RestWithASPNET.Data.Converter.Contract;
-using RestWithASPNET.Data.Converter.Implementations;
+﻿using RestWithASPNET.Data.Converter.Implementations;
 using RestWithASPNET.Data.VO;
 using RestWithASPNET.Model;
-using RestWithASPNET.Repository;
 using RestWithASPNETUdemy.Repository;
 
 namespace RestWithASPNET.Business.Implementations
