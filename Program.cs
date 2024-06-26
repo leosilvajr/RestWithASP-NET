@@ -4,9 +4,12 @@ using Microsoft.Net.Http.Headers;
 using MySqlConnector;
 using RestWithASPNET.Business;
 using RestWithASPNET.Business.Implementations;
+using RestWithASPNET.Hypermedia.Enricher;
+using RestWithASPNET.Hypermedia.Filters;
 using RestWithASPNET.Repository.Generic;
 using RestWithASPNETUdemy.Business;
 using RestWithASPNETUdemy.Business.Implementations;
+using RestWithASPNETUdemy.Hypermedia.Enricher;
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Repository;
 using Serilog;
@@ -26,14 +29,20 @@ if (builder.Environment.IsDevelopment())
     MigrateDatabase(connection);
 }
 
-builder.Services.AddMvc(options => //Content Negotiation
-{
-    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
+//Descomentar para habilitar saida da API em XML
+//builder.Services.AddMvc(options => //Content Negotiation
+//{
+//    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
 
-    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml")); 
-    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
-})
-.AddXmlSerializerFormatters();
+//    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml")); 
+//    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+//})
+//.AddXmlSerializerFormatters();
+
+var filteroptions = new HyperMediaFilterOptions();
+filteroptions.ContentResponseEnricherList.Add(new PersonEnricher());
+filteroptions.ContentResponseEnricherList.Add(new BookEnricher());
+builder.Services.AddSingleton(filteroptions);
 
 //Versioning API
 builder.Services.AddApiVersioning();
@@ -57,7 +66,11 @@ app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
 
 
+
 app.MapControllers();
+//app.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
+app.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/{id?}"); // Sugestão do Comentario
+
 
 app.Run();
 

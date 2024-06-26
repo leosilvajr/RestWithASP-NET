@@ -7,32 +7,40 @@
       "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\business\\implementations\\bookbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:business\\implementations\\bookbusinessimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\converter\\implementations\\bookconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\converter\\implementations\\bookconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\hypermedia\\enricher\\bookenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:hypermedia\\enricher\\bookenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\converter\\contract\\iparse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\converter\\contract\\iparse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\hypermedia\\enricher\\personenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:hypermedia\\enricher\\personenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\hypermedia\\contentresponseenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:hypermedia\\contentresponseenricher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\vo\\bookvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\vo\\bookvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\hypermedia\\filters\\hypermediafilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:hypermedia\\filters\\hypermediafilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:data\\vo\\personvo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\hypermedia\\hypermedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:hypermedia\\hypermedialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,106 +66,132 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HyperMediaFilter.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Filters\\HyperMediaFilter.cs",
+              "RelativeDocumentMoniker": "Hypermedia\\Filters\\HyperMediaFilter.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Filters\\HyperMediaFilter.cs",
+              "RelativeToolTip": "Hypermedia\\Filters\\HyperMediaFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:20:41.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContentResponseEnricher.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Hypermedia\\ContentResponseEnricher.cs",
+              "RelativeDocumentMoniker": "Hypermedia\\ContentResponseEnricher.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Hypermedia\\ContentResponseEnricher.cs",
+              "RelativeToolTip": "Hypermedia\\ContentResponseEnricher.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:14:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HyperMediaLink.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Hypermedia\\HyperMediaLink.cs",
+              "RelativeDocumentMoniker": "Hypermedia\\HyperMediaLink.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Hypermedia\\HyperMediaLink.cs",
+              "RelativeToolTip": "Hypermedia\\HyperMediaLink.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:14:09.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Git\\RestWithASP-NET\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAuwB4AAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAMwEYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T18:03:56.928Z",
+              "WhenOpened": "2024-06-26T01:13:32.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Generic\\GenericRepository.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeToolTip": "Repository\\Generic\\GenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAgAAAA",
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Controllers\\BookController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T14:47:30.287Z",
+              "WhenOpened": "2024-06-26T01:09:31.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BookBusinessImplementation.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\BookBusinessImplementation.cs",
-              "RelativeDocumentMoniker": "Business\\Implementations\\BookBusinessImplementation.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\BookBusinessImplementation.cs",
-              "RelativeToolTip": "Business\\Implementations\\BookBusinessImplementation.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBsAAAAzAAAA",
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Controllers\\PersonController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:55:16.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookConverter.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Implementations\\BookConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converter\\Implementations\\BookConverter.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Implementations\\BookConverter.cs",
-              "RelativeToolTip": "Data\\Converter\\Implementations\\BookConverter.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:54:54.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IParse.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Contract\\IParse.cs",
-              "RelativeDocumentMoniker": "Data\\Converter\\Contract\\IParse.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\Converter\\Contract\\IParse.cs",
-              "RelativeToolTip": "Data\\Converter\\Contract\\IParse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:54:33.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BookVO.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
-              "RelativeDocumentMoniker": "Data\\VO\\BookVO.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
-              "RelativeToolTip": "Data\\VO\\BookVO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:52:59.122Z",
+              "WhenOpened": "2024-06-26T01:09:32.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\Base\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Model\\Base\\BaseEntity.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\Base\\BaseEntity.cs",
-              "RelativeToolTip": "Model\\Base\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Title": "BookVO.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
+              "RelativeDocumentMoniker": "Data\\VO\\BookVO.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\VO\\BookVO.cs",
+              "RelativeToolTip": "Data\\VO\\BookVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:49:11.264Z",
+              "WhenOpened": "2024-06-26T01:07:50.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\Book.cs",
-              "RelativeDocumentMoniker": "Model\\Book.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\Book.cs",
-              "RelativeToolTip": "Model\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAoAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "PersonVO.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Data\\VO\\PersonVO.cs",
+              "RelativeDocumentMoniker": "Data\\VO\\PersonVO.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Data\\VO\\PersonVO.cs",
+              "RelativeToolTip": "Data\\VO\\PersonVO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:48:54.838Z",
+              "WhenOpened": "2024-06-26T01:07:41.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookEnricher.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Enricher\\BookEnricher.cs",
+              "RelativeDocumentMoniker": "Hypermedia\\Enricher\\BookEnricher.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Enricher\\BookEnricher.cs",
+              "RelativeToolTip": "Hypermedia\\Enricher\\BookEnricher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:06:59.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PersonEnricher.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "RelativeDocumentMoniker": "Hypermedia\\Enricher\\PersonEnricher.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Hypermedia\\Enricher\\PersonEnricher.cs",
+              "RelativeToolTip": "Hypermedia\\Enricher\\PersonEnricher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T21:32:58.856Z",
               "EditorCaption": ""
             }
           ]
