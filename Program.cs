@@ -1,6 +1,8 @@
 using EvolveDb;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
+using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using RestWithASPNET.Business;
 using RestWithASPNET.Business.Implementations;
@@ -47,6 +49,24 @@ builder.Services.AddSingleton(filteroptions);
 //Versioning API
 builder.Services.AddApiVersioning();
 
+//Adicionando Injeção do Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1",
+        new OpenApiInfo
+        {
+            //Atributos
+            Title = "Rest API's From 0 to Azure with ASP.NET Core and Docker",
+            Version = "v1",
+            Description = "API RESTful developed in course 'Rest API's From 0 to Azure with ASP.NET Core and Docker'",
+            Contact = new OpenApiContact
+            {
+                Name = "Leonardo Silva",
+                Url = new Uri("https://github.com/leosilvajr")
+            }
+        });
+});
+
 //Injeção de Dependencia
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 //builder.Services.AddScoped<IRepository, PersonRepositoryImplementation>();
@@ -65,7 +85,17 @@ app.UseAuthorization();
 
 app.UseCors("AllowAllOrigins");
 
+app.UseSwagger(); //Responsavel por gerar JSON
 
+app.UseSwaggerUI(C =>
+{
+    C.SwaggerEndpoint("/swagger/v1/swagger.json", "Rest API's From 0 to Azure with ASP.NET Core and Docker");
+}); //Responsavel por gerar pagina HMTL
+
+//Swagger Page
+var option = new RewriteOptions();
+option.AddRedirect("^$", "swagger"); // Redirecionar para a pagina do Swagger
+app.UseRewriter(option);
 
 app.MapControllers();
 //app.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");

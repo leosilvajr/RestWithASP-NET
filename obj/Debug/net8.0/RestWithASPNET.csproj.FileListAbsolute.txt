@@ -72,3 +72,7 @@ C:\Git\RestWithASP-NET\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Git\RestWithASP-NET\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Git\RestWithASP-NET\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Git\RestWithASP-NET\obj\Debug\net8.0\RestWithASPNET.MvcApplicationPartsAssemblyInfo.cs
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
