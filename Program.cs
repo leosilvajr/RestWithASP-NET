@@ -18,6 +18,11 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Permitir qualquer origem, metodo ou header configuração Default para consumir API
+builder.Services.AddCors(options => options.AddDefaultPolicy(builder => {
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+}));
+
 builder.Services.AddControllers();
 
 //Propriedades de Banco de Dados MySQL
@@ -31,6 +36,8 @@ if (builder.Environment.IsDevelopment())
     MigrateDatabase(connection);
 }
 
+
+
 //Descomentar para habilitar saida da API em XML
 //builder.Services.AddMvc(options => //Content Negotiation
 //{
@@ -40,6 +47,8 @@ if (builder.Environment.IsDevelopment())
 //    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
 //})
 //.AddXmlSerializerFormatters();
+
+
 
 var filteroptions = new HyperMediaFilterOptions();
 filteroptions.ContentResponseEnricherList.Add(new PersonEnricher());
@@ -67,6 +76,8 @@ builder.Services.AddSwaggerGen(c =>
         });
 });
 
+
+
 //Injeção de Dependencia
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 //builder.Services.AddScoped<IRepository, PersonRepositoryImplementation>();
@@ -74,16 +85,17 @@ builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 builder.Services.AddScoped<IBookBusiness, BookBusinessImplementation>();
 //builder.Services.AddScoped<IBookRepository, BookRepositoryImplementation>();
 
+
+
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+app.UseCors();
 app.UseAuthorization();
 
-
-app.UseCors("AllowAllOrigins");
 
 app.UseSwagger(); //Responsavel por gerar JSON
 
@@ -122,12 +134,3 @@ void MigrateDatabase(string connection)
         throw;
     }
 }
-
-
-//Deletar 
-/*
-    - IBookRepository
-    - BookRepositoryImplementation
-    - IPersonRepository
-    - PersonRepositoryImplementation
- */

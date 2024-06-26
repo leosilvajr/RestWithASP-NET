@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -43,53 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PersonController.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Controllers\\PersonController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Controllers\\PersonController.cs",
-              "RelativeToolTip": "Controllers\\PersonController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T01:55:40.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-26T01:54:04.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-26T01:53:53.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Git\\RestWithASP-NET\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAAAFsAAAAYAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAcwGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T01:44:53.806Z",
+              "WhenOpened": "2024-06-26T02:14:27.968Z",
               "EditorCaption": ""
             }
           ]
