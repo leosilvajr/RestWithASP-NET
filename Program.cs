@@ -39,14 +39,14 @@ if (builder.Environment.IsDevelopment())
 
 
 //Descomentar para habilitar saida da API em XML
-//builder.Services.AddMvc(options => //Content Negotiation
-//{
-//    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
+builder.Services.AddMvc(options => //Content Negotiation
+{
+    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
 
-//    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml")); 
-//    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
-//})
-//.AddXmlSerializerFormatters();
+    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+    options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+})
+.AddXmlSerializerFormatters();
 
 
 
