@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNET.Hypermedia.Filters;
 using RestWithASPNETUdemy.Business;
@@ -10,6 +11,7 @@ namespace RestWithASPNETUdemy.Controllers
 
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")] //Adicionando regra para que obriga autenticação
     [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
