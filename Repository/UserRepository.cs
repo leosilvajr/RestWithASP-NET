@@ -31,9 +31,9 @@ namespace RestWithASPNET.Repository
         public User RefreshUserInfo(User user)
         {
             //Se a request não encontrar usuario nenhum, retorna null
-            if (!_context.Users.Any(u => u.Id.Equals(user.id))) return null;
+            if (!_context.Users.Any(u => u.Id.Equals(user.Id))) return null;
 
-            var result = _context.Users.SingleOrDefault(p => p.Id.Equals(user.id));
+            var result = _context.Users.SingleOrDefault(p => p.Id.Equals(user.Id));
             if (result != null) //Se o resultado for diferente de null, vamos atualizar as informaçoes do usuario.
             {
                 try

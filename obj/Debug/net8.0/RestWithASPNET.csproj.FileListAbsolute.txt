@@ -76,3 +76,11 @@ C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Git\RestWithASP-NET\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Git\RestWithASP-NET\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

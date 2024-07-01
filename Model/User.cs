@@ -8,7 +8,7 @@ namespace RestWithASPNET.Model
     {
         [Key]
         [Column("id")]
-        public long id { get; set; }
+        public long Id { get; set; }
 
         [Column("user_name")]
         public string UserName { get; set; }
