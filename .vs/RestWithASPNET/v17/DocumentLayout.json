@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:model\\context\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,21 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Model\\User.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\User.cs",
-              "RelativeToolTip": "Model\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:43:57.224Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -48,32 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAjwEYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:43:13.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MySQLContext.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Model\\Context\\MySQLContext.cs",
-              "RelativeDocumentMoniker": "Model\\Context\\MySQLContext.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Model\\Context\\MySQLContext.cs",
-              "RelativeToolTip": "Model\\Context\\MySQLContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:42:09.113Z",
-              "EditorCaption": ""
             }
           ]
         }
