@@ -1,7 +1,6 @@
 ﻿using RestWithASPNET.Data.VO;
 using RestWithASPNET.Model;
 using RestWithASPNETUdemy.Model.Context;
-using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -14,18 +13,6 @@ namespace RestWithASPNET.Repository
         public UserRepository(MySQLContext context)
         {
             _context = context;
-        }
-
-
-        public User ValidateCredentials(UserVO user)
-        {
-            //Validar as credenciais do usuario.
-            //Vamos encripitar a senha para depois comparar
-            var pass = ComputeHash(user.Password, SHA256.Create());
-            return _context.Users.FirstOrDefault(u =>
-                                (u.UserName == user.UserName) &&
-                                (u.Password == user.Password));
-
         }
 
         public User RefreshUserInfo(User user)
@@ -44,27 +31,33 @@ namespace RestWithASPNET.Repository
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }
             return result;
         }
-
-
-        //Se der ruim, muda pra object
-        private string ComputeHash(string input, HashAlgorithm hashAlgorithm)
+        public User ValidateCredentials(UserVO user)
         {
-            //Metodo responsavel por encripitaar a senha.
-            Byte[] hashedBytes = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            var sBuilder = new StringBuilder();
-
-            foreach (var item in hashedBytes)
-            {
-                sBuilder.Append(item.ToString("x2"));
-            }
-            return sBuilder.ToString();
+            var pass = ComputeHash(user.Password);
+            return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
         }
+
+        //Validação para receber apenas o username
+        public User ValidateCredentials(string username)
+        {
+            return _context.Users.SingleOrDefault(u => (u.UserName == username));
+        }
+
+        private string ComputeHash(string input)
+        {
+            using (var algorithm = SHA256.Create())
+            {
+                Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+                Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
+
+
     }
 }

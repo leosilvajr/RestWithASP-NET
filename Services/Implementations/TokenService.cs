@@ -18,19 +18,18 @@ namespace RestWithASPNET.Services.Implementations
 
         public string GenerateAccessToken(IEnumerable<Claim> claims)
         {
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.Secret)); 
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.Secret));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
-            var options = new JwtSecurityToken
-                (
+            var options = new JwtSecurityToken(
                 issuer: _configuration.Issuer,
                 audience: _configuration.Audience,
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(_configuration.Minutes),
                 signingCredentials: signinCredentials
-                );
-
-            return new JwtSecurityTokenHandler().WriteToken(options);
+            );
+            string tokenString = new JwtSecurityTokenHandler().WriteToken(options);
+            return tokenString;
         }
 
         public string GenerateRefreshToken()

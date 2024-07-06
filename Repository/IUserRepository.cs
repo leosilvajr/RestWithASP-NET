@@ -8,5 +8,8 @@ namespace RestWithASPNET.Repository
         User RefreshUserInfo(User user);
         User ValidateCredentials(UserVO user);
 
+        //Validação para receber apenas o username
+        User ValidateCredentials(string username);
+
     }
 }

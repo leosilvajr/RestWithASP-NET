@@ -22,12 +22,21 @@ namespace RestWithASPNET.Controllers
         [Route("signin")]
         public IActionResult Signin([FromBody] UserVO user)
         {
-            if (user == null) return BadRequest("Invalid Client Resquest");
-
-            //Gerar Token
+            if (user == null) return BadRequest("Ivalid client request");
             var token = _loginBusiness.ValidateCredentials(user);
             if (token == null) return Unauthorized();
-            return Ok(user);
+            return Ok(token);
         }
+
+        [HttpPost]
+        [Route("refresh")]
+        public IActionResult Refresh([FromBody] TokenVO tokenVo)
+        {
+            if (tokenVo == null) return BadRequest("Ivalid client request");
+            var token = _loginBusiness.ValidateCredentials(tokenVo);
+            if (token == null) return BadRequest("Ivalid client request");
+            return Ok(token);
+        }
+
     }
 }
