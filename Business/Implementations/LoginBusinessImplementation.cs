@@ -38,8 +38,6 @@ namespace RestWithASPNET.Business.Implementations
             var accessToken = _tokenService.GenerateAccessToken(claims); //Token para autenticar 
             var refreshToken = _tokenService.GenerateRefreshToken(); //Usar caso o accessToken estiver expirado
 
-            //Vamos persistir isso na base.
-            _userRepository.RefreshUserInfo(user);
 
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configurtion.DaysToExpiry);
@@ -47,6 +45,8 @@ namespace RestWithASPNET.Business.Implementations
             DateTime createDate = DateTime.Now; //Data de criação do Token
             DateTime expirationDate = createDate.AddMinutes(_configurtion.Minutes);
 
+            //Vamos persistir isso na base.
+            _userRepository.RefreshUserInfo(user);
 
             return new TokenVO(
                 true, 
@@ -67,10 +67,11 @@ namespace RestWithASPNET.Business.Implementations
             //Recuperando o Usuario
             var username = principal.Identity.Name;
             var user = _userRepository.ValidateCredentials(username);
-            if (user == null || 
-                user.RefreshToken != refreshToken || 
-                user.RefreshTokenExpiryTime <= DateTime.Now) 
-                return null; 
+            if (user == null ||
+                user.RefreshToken != refreshToken ||
+                user.RefreshTokenExpiryTime <= DateTime.Now)
+                return null;
+
 
             accessToken = _tokenService.GenerateAccessToken(principal.Claims);
             refreshToken = _tokenService.GenerateRefreshToken();
@@ -93,6 +94,11 @@ namespace RestWithASPNET.Business.Implementations
                 accessToken,
                 refreshToken
                 );
+        }
+
+        public bool RevokeToken(string userName)
+        {
+            return _userRepository.RevokeToken(userName);
         }
     }
 }

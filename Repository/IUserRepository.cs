@@ -11,5 +11,10 @@ namespace RestWithASPNET.Repository
         //Validação para receber apenas o username
         User ValidateCredentials(string username);
 
+        bool RevokeToken(string userName);
+
+        //GTP
+        User CreateUser(User newUser);
+
     }
 }

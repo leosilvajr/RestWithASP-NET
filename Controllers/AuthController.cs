@@ -1,8 +1,10 @@
 ﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASPNET.Business;
 using RestWithASPNET.Data.VO;
 using RestWithASPNET.Model;
+using RestWithASPNET.Repository;
 
 namespace RestWithASPNET.Controllers
 {
@@ -12,10 +14,12 @@ namespace RestWithASPNET.Controllers
     public class AuthController : ControllerBase
     {
         private ILoginBusiness _loginBusiness;
+        private readonly IUserRepository _userRepository;
 
-        public AuthController(ILoginBusiness loginBusiness)
+        public AuthController(ILoginBusiness loginBusiness,  IUserRepository userRepository)
         {
             _loginBusiness = loginBusiness;
+            _userRepository = userRepository;
         }
 
         [HttpPost]
@@ -38,5 +42,26 @@ namespace RestWithASPNET.Controllers
             return Ok(token);
         }
 
+        [HttpPost]
+        [Route("signup")]
+        public IActionResult Signup([FromBody] User newUser)
+        {
+            if (newUser == null) return BadRequest("Invalid client request");
+            var user = _userRepository.CreateUser(newUser);
+            if (user == null) return BadRequest("User already exists");
+            return Ok(user);
+        }
+
+        [HttpGet]
+        [Route("revoke")] //User revoke no LogOff
+        [Authorize("Bearer")] //Adicionando regra para que obriga autenticação
+        public IActionResult Revoke() // Não precisa passar parametro porque ja temos o Bearer
+        {
+            var username = User.Identity.Name;
+            var result = _loginBusiness.RevokeToken(username);
+
+            if (!result) return BadRequest("Ivalid client request");
+            return Ok("Logoff realizado com sucesso. Faça login novamente para gerar token.");
+        }
     }
 }
