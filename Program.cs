@@ -16,6 +16,7 @@ using RestWithASPNET.Hypermedia.Enricher;
 using RestWithASPNET.Hypermedia.Filters;
 using RestWithASPNET.Repository;
 using RestWithASPNET.Repository.Generic;
+using RestWithASPNET.Repository.Implementations;
 using RestWithASPNET.Services;
 using RestWithASPNET.Services.Implementations;
 using RestWithASPNETUdemy.Business;
@@ -130,17 +131,20 @@ builder.Services.AddSwaggerGen(c =>
 
 //Injeção de Dependencia
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-//builder.Services.AddScoped<IRepository, PersonRepositoryImplementation>();
 builder.Services.AddScoped<IBookBusiness, BookBusinessImplementation>();
-//builder.Services.AddScoped<IBookRepository, BookRepositoryImplementation>();
+builder.Services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
+
+//Injeção de Dependencia : Repository Token/USuario
+builder.Services.AddTransient<ITokenService, TokenService>();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
 //Injeção de Dependencia : Repository Generica
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
-//Injeção de Dependencia : Repository Token/USuario
-builder.Services.AddTransient<ITokenService, TokenService>();
-builder.Services.AddTransient<ILoginBusiness, LoginBusinessImplementation>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
+
+
 
 
 

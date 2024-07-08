@@ -1,5 +1,4 @@
-﻿
-using RestWithASPNETUdemy.Data.VO;
+﻿using RestWithASPNETUdemy.Data.VO;
 
 namespace RestWithASPNETUdemy.Business
 {
@@ -7,8 +6,10 @@ namespace RestWithASPNETUdemy.Business
     {
         PersonVO Create(PersonVO person);
         PersonVO FindByID(long id);
+        List<PersonVO> FindByName(string firstName, string lastName);
         List<PersonVO> FindAll();
         PersonVO Update(PersonVO person);
+        PersonVO Disable(long id);
         void Delete(long id);
     }
 }
