@@ -8,12 +8,12 @@ using System.Collections.Generic;
 namespace RestWithASPNETUdemy.Business.Implementations
 {
     //Vamos ajustar a PersonBusiness para lidar com PesonVO, ou seja, vamos encapsular a logica da nossa aplicação.
-    public class PersonBusinessImplementation : IPersonBusiness
+    public class PersonBusiness : IPersonBusiness
     {
         private readonly IPersonRepository _repository;
         private readonly PersonConverter _converter;
 
-        public PersonBusinessImplementation(IPersonRepository repository)
+        public PersonBusiness(IPersonRepository repository)
         {
             _repository = repository;
             _converter = new PersonConverter();

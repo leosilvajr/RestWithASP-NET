@@ -5,11 +5,11 @@ using RestWithASPNETUdemy.Repository;
 
 namespace RestWithASPNET.Business.Implementations
 {
-    public class BookBusinessImplementation : IBookBusiness
+    public class BookBusiness : IBookBusiness
     {
         private readonly IRepository<Book> _repository;
         private readonly BookConverter converter;
-        public BookBusinessImplementation(IRepository<Book> repository)
+        public BookBusiness(IRepository<Book> repository)
         {
             _repository = repository;
             converter = new BookConverter();

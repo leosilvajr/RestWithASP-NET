@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
+using RestWithASPNET;
 using RestWithASPNET.Business;
 using RestWithASPNET.Business.Implementations;
 using RestWithASPNET.Configurations;
@@ -84,6 +86,7 @@ builder.Services.AddDbContext<MySQLContext>(op => op.UseMySql(
 
 if (builder.Environment.IsDevelopment())
 {
+
     MigrateDatabase(connection);
 }
 
@@ -109,41 +112,46 @@ builder.Services.AddSingleton(filteroptions);
 //Versioning API
 builder.Services.AddApiVersioning();
 
-//Adicionando Injeção do Swagger
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1",
-        new OpenApiInfo
-        {
-            //Atributos
-            Title = "Rest API's From 0 to Azure with ASP.NET Core and Docker",
-            Version = "v1",
-            Description = "API RESTful developed in course 'Rest API's From 0 to Azure with ASP.NET Core and Docker'",
-            Contact = new OpenApiContact
-            {
-                Name = "Leonardo Silva",
-                Url = new Uri("https://github.com/leosilvajr")
-            }
-        });
-});
 
 
 
 //Injeção de Dependencia
-builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-builder.Services.AddScoped<IBookBusiness, BookBusinessImplementation>();
-builder.Services.AddScoped<ILoginBusiness, LoginBusinessImplementation>();
+builder.Services.AddScoped<IPersonBusiness, PersonBusiness>();
+builder.Services.AddScoped<IBookBusiness, BookBusiness>();
+builder.Services.AddScoped<ILoginBusiness, LoginBusiness>();
 
 //Injeção de Dependencia : Repository Token/USuario
 builder.Services.AddTransient<ITokenService, TokenService>();
-
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
 //Injeção de Dependencia : Repository Generica
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
+//Injeção de Dependencia : Repository Files
+builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<IFileBusiness, FileBusiness>();
 
+// Adicionando serviços ao contêiner
+builder.Services.AddControllers().AddNewtonsoftJson(); // Adiciona suporte ao Newtonsoft Json
+
+
+//Adicionando Injeção do Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Rest API's From 0 to Azure with ASP.NET Core and Docker",
+        Version = "v1",
+        Description = "API RESTful developed in course 'Rest API's From 0 to Azure with ASP.NET Core and Docker'",
+        Contact = new OpenApiContact
+        {
+            Name = "Leonardo Silva",
+            Url = new Uri("https://github.com/leosilvajr")
+        }
+    });
+});
 
 
 
@@ -153,6 +161,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseCors();
+app.UseAuthentication();
 app.UseAuthorization();
 
 
