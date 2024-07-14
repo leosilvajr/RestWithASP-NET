@@ -10,19 +10,27 @@ namespace RestWithASPNET.Business.Implementations
         public FileBusiness(IHttpContextAccessor context)
         {
             _context = context;
-            _basePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadDir");
+            _basePath = Directory.GetCurrentDirectory() + "\\UploadDir\\";
 
 
         }
 
         public byte[] GetFile(string fileName)
         {
-            throw new NotImplementedException();
+            var filePath = _basePath + fileName;    
+            return File.ReadAllBytes(filePath);
         }
 
-        public Task<List<FileDetailVO>> SaveFilesToDisk(IList<IFormFile> file)
+        public async Task<List<FileDetailVO>> SaveFilesToDisk(IList<IFormFile> files)
         {
-            throw new NotImplementedException();
+            var list = new List<FileDetailVO>();
+
+            foreach (var file in files) 
+            {
+                list.Add(await SaveFileToDisk(file));
+            }
+
+            return list;
         }
 
         //Salvar arquivo em disco.
