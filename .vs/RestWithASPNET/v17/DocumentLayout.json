@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|c:\\git\\restwithasp-net\\business\\implementations\\filebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|RestWithASPNET.csproj|solutionrelative:business\\implementations\\filebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,32 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileBusiness.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\FileBusiness.cs",
-              "RelativeDocumentMoniker": "Business\\Implementations\\FileBusiness.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Business\\Implementations\\FileBusiness.cs",
-              "RelativeToolTip": "Business\\Implementations\\FileBusiness.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAwAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T15:11:41.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileController.cs",
-              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Controllers\\FileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FileController.cs",
-              "ToolTip": "C:\\Git\\RestWithASP-NET\\Controllers\\FileController.cs",
-              "RelativeToolTip": "Controllers\\FileController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAAADkAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T15:09:49.773Z",
-              "EditorCaption": ""
             }
           ]
         },
