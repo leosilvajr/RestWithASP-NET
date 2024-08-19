@@ -41,7 +41,10 @@ namespace RestWithASPNET.Repository
         public User ValidateCredentials(UserVO user)
         {
             var pass = ComputeHash(user.Password);
-            return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
+            var userFound = _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
+            var allUsers = _context.Users;
+
+            return userFound;
         }
 
         //Validação para receber apenas o username

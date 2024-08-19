@@ -84,11 +84,11 @@ builder.Services.AddDbContext<MySQLContext>(op => op.UseMySql(
     connection,
     new MySqlServerVersion(new Version(8, 0, 29))));
 
-if (builder.Environment.IsDevelopment())
-{
+//if (builder.Environment.IsDevelopment())
+//{
 
-    MigrateDatabase(connection);
-}
+//    MigrateDatabase(connection);
+//}
 
 
 
@@ -97,7 +97,7 @@ builder.Services.AddMvc(options => //Content Negotiation
 {
     options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
 
-    options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+    //options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
     options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
 })
 .AddXmlSerializerFormatters();
@@ -184,21 +184,21 @@ app.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/
 
 app.Run();
 
-void MigrateDatabase(string connection)
-{
-    try
-    {
-        var evolveConnection = new MySqlConnection(connection);
-        var evolve = new Evolve(evolveConnection, Log.Information)
-        {
-            Locations = new List<string> { "db/migrations", "db/dataset" },
-            IsEraseDisabled = true,
-        };
-        evolve.Migrate();
-    }
-    catch (Exception ex)
-    {
-        Log.Error("Database migration failed", ex);
-        throw;
-    }
-}
+//void MigrateDatabase(string connection)
+//{
+//    try
+//    {
+//        var evolveConnection = new MySqlConnection(connection);
+//        var evolve = new Evolve(evolveConnection, Log.Information)
+//        {
+//            Locations = new List<string> { "db/migrations", "db/dataset" },
+//            IsEraseDisabled = true,
+//        };
+//        evolve.Migrate();
+//    }
+//    catch (Exception ex)
+//    {
+//        Log.Error("Database migration failed", ex);
+//        throw;
+//    }
+//}
