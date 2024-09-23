@@ -2,7 +2,7 @@ sudo: required
 dist: bionic
 language: csharp
 mono: none
-dotnet: 8.0
+dotnet: 8
 services: docker
 before_install:
   - cd .
@@ -10,14 +10,15 @@ before_install:
 script:
   - docker-compose build
 before_deploy:
-- echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME"
+    --password-stdin
 deploy:
   provider: script
-  script:
-    docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID;
-    docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
-    docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID;
-    docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
+  script: docker tag rest-with-asp-net-db:latest
+    $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID; docker tag
+    rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
+    docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID; docker
+    push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
   on:
     brach: main
 notifications:
