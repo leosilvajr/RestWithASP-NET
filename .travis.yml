@@ -2,7 +2,7 @@ sudo: required
 dist: bionic
 language: csharp
 mono: none
-dotnet: 8
+dotnet: 3.1
 services: docker
 before_install:
   - cd .
