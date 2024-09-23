@@ -1,0 +1,6 @@
+sudo: required
+dist: bionic
+language: csharp
+mono: none
+dotnet: 8.0
+services: docker

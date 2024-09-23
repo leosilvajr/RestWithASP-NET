@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\restwithaspnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\restwithaspnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +39,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Project\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:23:18.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Project\\Controllers\\PersonController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T23:17:17.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Project\\Controllers\\BookController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T23:17:12.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RestWithASPNET.csproj",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\RestWithASPNET.csproj",
+              "RelativeDocumentMoniker": "Project\\RestWithASPNET.csproj",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\RestWithASPNET.csproj",
+              "RelativeToolTip": "Project\\RestWithASPNET.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-20T16:33:47.711Z"
             }
           ]
         },

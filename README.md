@@ -1,3 +1,6 @@
+[![Build Status](https://app.travis-ci.com/leosilvajr/RestWithASP-NET.svg?token=L5LsRz6cyFKSiL84guc5&branch=main)](https://app.travis-ci.com/leosilvajr/RestWithASP-NET)
+
+
 # Desenvolvendo uma API RESTful em .NET 8.0: Inovação e Eficiência 🚀
 
 Olá, pessoal!
@@ -100,3 +103,4 @@ Vamos construir algo incrível juntos! 🚀
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
+[![Build Status](https://app.travis-ci.com/leosilvajr/RestWithASP-NET.svg?token=L5LsRz6cyFKSiL84guc5&branch=main)](https://app.travis-ci.com/leosilvajr/RestWithASP-NET)
