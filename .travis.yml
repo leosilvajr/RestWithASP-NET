@@ -2,7 +2,7 @@ sudo: required
 dist: bionic
 language: csharp
 mono: none
-dotnet: 8.0
+dotnet: 7.0
 services:
   - docker
 
@@ -18,7 +18,7 @@ before_install:
   - sudo dpkg -i packages-microsoft-prod.deb
   - sudo apt-get update
   - sudo apt-get install -y apt-transport-https
-  - sudo apt-get install -y dotnet-sdk-8.0
+  - sudo apt-get install -y dotnet-sdk-7.0
 
 script:
   - docker-compose build --memory=4g
