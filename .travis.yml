@@ -16,11 +16,11 @@ before_install:
   - echo "We are in the right folder!"
   - wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
   - sudo dpkg -i packages-microsoft-prod.deb
-  - sudo rm /etc/apt/sources.list.d/dotnet-official.list  # Remove a duplicação do repositório
-  - sudo apt-get remove -y postgresql*  # Remove os pacotes relacionados ao PostgreSQL
+  - sudo rm /etc/apt/sources.list.d/dotnet-official.list  # Remove duplicação do repositório
   - sudo apt-get update
   - sudo apt-get install -y apt-transport-https
   - sudo apt-get install -y dotnet-sdk-7.0
+  - sudo apt-get remove -y postgresql* || true  # Evita erro se não estiver instalado
 
 script:
   - docker-compose build --memory=4g
