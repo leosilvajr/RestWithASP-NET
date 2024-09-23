@@ -5,7 +5,7 @@ mono: none
 dotnet: 8.0
 services: docker
 before_install:
-  - cd Project/
+  - cd .
   - echo "We are in the right folder."
 script:
   - docker-compose build
