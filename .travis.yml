@@ -2,23 +2,34 @@ sudo: required
 dist: bionic
 language: csharp
 mono: none
-dotnet: 3.1
-services: docker
+dotnet: 8.0
+services:
+  - docker
+
+cache:
+  directories:
+    - $HOME/.nuget/packages
+    - $HOME/.local/share/NuGet/v3-cache
+
 before_install:
   - cd .
   - echo "We are in the right folder!"
+
 script:
-  - docker-compose build
+  - docker-compose build --memory=4g
+
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+
 deploy:
   provider: script
   script:
-    docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID;
-    docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID;
-    docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
-    docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID;
+    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
+    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
+    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
+    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
   on:
     branch: master
+
 notifications:
   email: false
