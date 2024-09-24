@@ -2,41 +2,23 @@ sudo: required
 dist: bionic
 language: csharp
 mono: none
-dotnet: 7.0
-services:
-  - docker
-
-cache:
-  directories:
-    - $HOME/.nuget/packages
-    - $HOME/.local/share/NuGet/v3-cache
-
+dotnet: 8.0
+services: docker
 before_install:
   - cd .
   - echo "We are in the right folder!"
-  - wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-  - sudo dpkg -i packages-microsoft-prod.deb
-  - sudo rm /etc/apt/sources.list.d/dotnet-official.list  # Remove duplicação do repositório
-  - sudo rm -f /etc/apt/sources.list.d/pgdg.list || true  # Remove repositório PostgreSQL, se existir
-  - sudo apt-get update
-  - sudo apt-get install -y apt-transport-https
-  - sudo apt-get install -y dotnet-sdk-7.0
-
 script:
-  - docker-compose build --memory=300m
-
+  - docker-compose build
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
-
 deploy:
   provider: script
   script:
-    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
-    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
+    docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
+    docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID;
+    docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID;
+    docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID;
   on:
     branch: main
-
 notifications:
   email: false
