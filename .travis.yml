@@ -1,8 +1,7 @@
 sudo: required
-dist: bionic
-language: csharp
+dist: focal
+language: generic
 mono: none
-dotnet: 7.0
 services:
   - docker
 
