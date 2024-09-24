@@ -19,7 +19,8 @@ before_install:
   - dotnet restore "./Project/RestWithASPNET.csproj"
 
 script:
-  - docker-compose build --no-cache
+  - cd ./Project
+  - docker build --no-cache -t rest-with-asp-net:latest .
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
@@ -27,7 +28,6 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - cd ./Project
     - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
     - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID
     - docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
