@@ -20,7 +20,7 @@ before_install:
   - sudo rm -f /etc/apt/sources.list.d/pgdg.list || true  # Remove repositório PostgreSQL, se existir
   - sudo apt-get update
   - sudo apt-get install -y apt-transport-https
-  - sudo apt-get install -y dotnet-sdk-7.0
+  - sudo snap install dotnet-sdk --classic --channel 8.0/stable
   - dotnet restore "./Project/RestWithASPNET.csproj"
 
 script:
