@@ -28,10 +28,10 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
-    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID
+    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
+    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)
+    - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
+    - docker push $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)
   on:
     branch: main
 
