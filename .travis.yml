@@ -26,9 +26,9 @@ before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
   - git checkout main 
   - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
-  - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)
   - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
-  - docker push $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)  
+
+  # Aqui eu devo adicionar a tag e o push da imagem do projeto rest-with-asp-net-db
 
 deploy:
   provider: script
