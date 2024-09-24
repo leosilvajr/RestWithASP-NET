@@ -23,7 +23,7 @@ before_install:
   - sudo apt-get install -y dotnet-sdk-7.0
 
 script:
-  - free -h
+  - docker-compose build
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
