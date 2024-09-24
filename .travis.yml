@@ -19,7 +19,7 @@ before_install:
   - dotnet restore "./Project/RestWithASPNET.csproj"
 
 script:
-  - docker build -t rest-with-asp-net:latest .
+  - docker-compose build -t rest-with-asp-net:latest .
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
