@@ -10,6 +10,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copiar apenas o arquivo .csproj primeiro para cache de dependências
+RUN free -h
 COPY ["Project/RestWithASPNET.csproj", "Project/"]
 RUN dotnet restore "Project/RestWithASPNET.csproj"
 
