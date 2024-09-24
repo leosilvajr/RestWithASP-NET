@@ -28,7 +28,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - git status
+    - git checkout main 
     - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
     - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
 
