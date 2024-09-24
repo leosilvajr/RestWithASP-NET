@@ -19,7 +19,7 @@ before_install:
   - dotnet restore "./Project/RestWithASPNET.csproj"
 
 script:
-  - docker-compose build --memory=8g
+  - docker-compose build
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
@@ -27,12 +27,12 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
-    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID
-    - docker push $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID
+    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
+    - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID
+    - docker push $DOCKER_USERNAME/rest-with-asp-net:$TRAVIS_JOB_ID
+    - docker push $DOCKER_USERNAME/rest-with-asp-net-db:$TRAVIS_JOB_ID
   on:
-    branch: master
+    branch: main
 
 notifications:
   email: false
