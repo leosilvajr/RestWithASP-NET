@@ -24,14 +24,14 @@ script:
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+  - git checkout main 
+  - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
+  - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
 
 deploy:
   provider: script
   script:
-    - git checkout main 
-    - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
-    - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
-
+    - echo "Deployed"  
   on:
     branch: main
 
