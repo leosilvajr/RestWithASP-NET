@@ -20,15 +20,25 @@ before_install:
 
 script:
   - cd ./Project
+  # Build da imagem da API
   - docker build --no-cache -t rest-with-asp-net:latest .
+  # Volta para a pasta raiz para build do banco de dados
+  - cd ..
+  # Build da imagem do banco de dados
+  - docker build --no-cache -t rest-with-asp-net-db:latest -f db/Dockerfile .
 
 before_deploy:
+  # Login no Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+  
+  # Deploy da imagem da API
   - git checkout main 
   - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
   - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
 
-  # Aqui eu devo adicionar a tag e o push da imagem do projeto rest-with-asp-net-db
+  # Deploy da imagem do banco de dados
+  - docker tag rest-with-asp-net-db:latest $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)
+  - docker push $DOCKER_USERNAME/rest-with-asp-net-db:latest-$(date +%s)
 
 deploy:
   provider: script
