@@ -7,7 +7,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: db/Dockerfile
+      dockerfile: Project/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       MYSQL_ROOT_PASSWORD: docker
