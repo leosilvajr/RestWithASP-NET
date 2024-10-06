@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Git\\RestWithASP-NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|c:\\git\\restwithasp-net\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B96BE43A-86A5-4B91-A275-D75EF74C99CE}|Project\\RestWithASPNET.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,11 +32,10 @@
               "RelativeDocumentMoniker": "Project\\Program.cs",
               "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\Program.cs",
               "RelativeToolTip": "Project\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAzAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAnwE8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T02:37:39.015Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -49,6 +52,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Git\\RestWithASP-NET\\Project\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Project\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAnwBwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T18:08:09.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Git\\RestWithASP-NET\\Project\\appsettings.json",
               "RelativeDocumentMoniker": "Project\\appsettings.json",
@@ -56,8 +72,7 @@
               "RelativeToolTip": "Project\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-27T19:56:24.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T19:56:24.943Z"
             }
           ]
         },
