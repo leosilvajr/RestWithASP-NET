@@ -1,16 +1,12 @@
-using EvolveDb;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
-using MySqlConnector;
-using RestWithASPNET;
 using RestWithASPNET.Business;
 using RestWithASPNET.Business.Implementations;
 using RestWithASPNET.Configurations;
@@ -26,40 +22,39 @@ using RestWithASPNETUdemy.Business.Implementations;
 using RestWithASPNETUdemy.Hypermedia.Enricher;
 using RestWithASPNETUdemy.Model.Context;
 using RestWithASPNETUdemy.Repository;
-using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Setar valores do appsettings.json no tokenConfigurations
+// Setar valores do appsettings.json no tokenConfigurations
 var tokenConfigurations = new TokenConfiguration();
 new ConfigureFromConfigurationOptions<TokenConfiguration>(
-        builder.Configuration.GetSection("TokenConfigurations")
-    )
+    builder.Configuration.GetSection("TokenConfigurations"))
     .Configure(tokenConfigurations);
 
 builder.Services.AddSingleton(tokenConfigurations);
 
+// Configuração da autenticação com JWT
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-    .AddJwtBearer(options =>
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
     {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = tokenConfigurations.Issuer,
-            ValidAudience = tokenConfigurations.Audience,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret)) //Chave Simetrica
-        };
-    });
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = tokenConfigurations.Issuer,
+        ValidAudience = tokenConfigurations.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenConfigurations.Secret))
+    };
+});
 
-//Serviço de Autorização
+// Serviço de Autorização
 builder.Services.AddAuthorization(auth =>
 {
     auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
@@ -67,76 +62,55 @@ builder.Services.AddAuthorization(auth =>
         .RequireAuthenticatedUser().Build());
 });
 
+// Configuração do CORS permitindo qualquer origem, método ou cabeçalho
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
+// Adicionando suporte a controladores e JSON
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(); // Adiciona suporte ao Newtonsoft Json
 
-
-
-//Permitir qualquer origem, metodo ou header configuração Default para consumir API
-builder.Services.AddCors(options => options.AddDefaultPolicy(builder => {
-    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-}));
-
-builder.Services.AddControllers();
-
-//Propriedades de Banco de Dados MySQL
+// Configuração do MySQL
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
 builder.Services.AddDbContext<MySQLContext>(op => op.UseMySql(
     connection,
     new MySqlServerVersion(new Version(8, 0, 29))));
 
-//if (builder.Environment.IsDevelopment())
-//{
-
-//    MigrateDatabase(connection);
-//}
-
-
-
-//Descomentar para habilitar saida da API em XML
-builder.Services.AddMvc(options => //Content Negotiation
+// Content Negotiation para JSON e XML
+builder.Services.AddMvc(options =>
 {
-    options.RespectBrowserAcceptHeader = true; //Para aceitar a propriedade setada no cabeçalho do header da request
-
-    //options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml"));
+    options.RespectBrowserAcceptHeader = true;
     options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+    // options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("application/xml")); // Descomente se quiser XML
 })
 .AddXmlSerializerFormatters();
 
+// Configuração de Hypermedia (HATEOAS)
+var filterOptions = new HyperMediaFilterOptions();
+filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+builder.Services.AddSingleton(filterOptions);
 
-
-var filteroptions = new HyperMediaFilterOptions();
-filteroptions.ContentResponseEnricherList.Add(new PersonEnricher());
-filteroptions.ContentResponseEnricherList.Add(new BookEnricher());
-builder.Services.AddSingleton(filteroptions);
-
-//Versioning API
+// Versionamento de API
 builder.Services.AddApiVersioning();
 
-
-
-
-//Injeção de Dependencia
+// Injeção de dependência - Serviços e Repositórios
 builder.Services.AddScoped<IPersonBusiness, PersonBusiness>();
 builder.Services.AddScoped<IBookBusiness, BookBusiness>();
 builder.Services.AddScoped<ILoginBusiness, LoginBusiness>();
-
-//Injeção de Dependencia : Repository Token/USuario
 builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
-
-//Injeção de Dependencia : Repository Generica
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
-
-//Injeção de Dependencia : Repository Files
 builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IFileBusiness, FileBusiness>();
 
-// Adicionando serviços ao contêiner
-builder.Services.AddControllers().AddNewtonsoftJson(); // Adiciona suporte ao Newtonsoft Json
-
-
-//Adicionando Injeção do Swagger
+// Adicionando suporte ao Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -153,37 +127,32 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-
-
-
 var app = builder.Build();
 
+// Configuração do pipeline HTTP
 app.UseHttpsRedirection();
-
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
-app.UseSwagger(); //Responsavel por gerar JSON
-
-app.UseSwaggerUI(C =>
+// Swagger Middleware
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    C.SwaggerEndpoint("/swagger/v1/swagger.json", "Rest API's From 0 to Azure with ASP.NET Core and Docker");
-}); //Responsavel por gerar pagina HMTL
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Rest API's From 0 to Azure with ASP.NET Core and Docker");
+});
 
-//Swagger Page
+// Redirecionamento para a página do Swagger
 var option = new RewriteOptions();
-option.AddRedirect("^$", "swagger"); // Redirecionar para a pagina do Swagger
+option.AddRedirect("^$", "swagger");
 app.UseRewriter(option);
 
 app.MapControllers();
-//app.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
-app.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/{id?}"); // Sugestão do Comentario
-
+app.MapControllerRoute("DefaultApi", "{controller=values}/v{version=apiVersion}/{id?}");
 
 app.Run();
 
+// Método para migração do banco de dados usando Evolve
 //void MigrateDatabase(string connection)
 //{
 //    try
