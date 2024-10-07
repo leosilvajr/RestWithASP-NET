@@ -10,7 +10,7 @@ namespace RestWithASPNET.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
-    //[Authorize("Bearer")] //Adicionando regra para que obriga autenticação
+    //[Authorize("Bearer")] //Adicionando regra para que obriga autenticação.
     [Route("api/[controller]/v{version:apiVersion}")]
     public class AuthController : ControllerBase
     {
