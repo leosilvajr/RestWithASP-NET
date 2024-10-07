@@ -30,9 +30,9 @@ script:
 before_deploy:
   # Login no Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
-  
+
   # Deploy da imagem da API
-  - git checkout main 
+  - git checkout main
   - docker tag rest-with-asp-net:latest $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
   - docker push $DOCKER_USERNAME/rest-with-asp-net:latest-$(date +%s)
 
@@ -43,7 +43,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - echo "Deployed"  
+    - echo "Deployed"
   on:
     branch: main
 
