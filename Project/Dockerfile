@@ -11,7 +11,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copy the project file and restore any dependencies
-COPY ["Project/RestWithASPNET.csproj", "Project/"]
+COPY Project/RestWithASPNET.csproj Project/
 RUN dotnet restore "Project/RestWithASPNET.csproj"
 
 # Copy the entire source code to the working directory
